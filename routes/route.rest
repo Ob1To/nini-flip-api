@@ -1,0 +1,11 @@
+GET http://localhost:3000/highscore
+
+###
+
+POST http://localhost:3000/highscore
+Content-Type: application/json
+
+{
+    "name": "Pesho",
+    "time": 100
+}
