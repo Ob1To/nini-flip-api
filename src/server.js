@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import cors from 'cors';
 
 const express = require('express')
 const app = express()
@@ -9,10 +10,11 @@ const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('db connected'))
 
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
 
-const highscoreRouter = require('./../routes/highscore')
-app.use('/highscore', highscoreRouter)
+const highscoreRouter = require('../routes/highscores')
+app.use('/highscores', highscoreRouter)
 
 // app.get('/', (req, res) => {
 //   res.send('Routes in Express.js');

@@ -1,11 +1,16 @@
-GET http://localhost:3000/highscore
+GET http://localhost:3000/highscores
 
 ###
 
-POST http://localhost:3000/highscore
+POST http://localhost:3000/highscores
 Content-Type: application/json
 
 {
-    "name": "Pesho",
-    "time": 100
+    "name": "Stoiko",
+    "time": 74
 }
+
+###
+
+GET http://localhost:3000/highscores/top3
+
